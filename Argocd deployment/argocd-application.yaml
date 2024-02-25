@@ -2,17 +2,19 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app-prod
-  namespace: argocd
+  namespace: argocd-cdc
 spec:
   destination:
     namespace: production
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: production
+    path: prod
     repoURL: https://github.com/preddykolan19/cicd-argo-tek.git
     targetRevision: HEAD
   syncPolicy:
+    sysncOptions:
+    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
