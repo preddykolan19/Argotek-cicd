@@ -13,8 +13,6 @@ spec:
     repoURL: https://github.com/preddykolan19/cicd-argo-tek.git
     targetRevision: HEAD
   syncPolicy:
-    sysncOptions:
-    - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
