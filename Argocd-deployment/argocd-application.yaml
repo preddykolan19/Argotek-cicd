@@ -11,7 +11,7 @@ spec:
   source:
     path: prod
     repoURL: https://github.com/preddykolan19/Argotek-cicd.git
-    targetRevision: HEAD
+    targetRevision: master
   syncPolicy:
     syncOptions:
     - CreateNamespace=true
