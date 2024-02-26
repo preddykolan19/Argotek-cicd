@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app-prod
+  name: myapp-prod
   namespace: argocd-cdc
 spec:
   destination:
@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: prod
-    repoURL: https://github.com/preddykolan19/cicd-argo-tek.git
+    repoURL: https://github.com/preddykolan19/Argotek-cicd.git
     targetRevision: HEAD
   syncPolicy:
     syncOptions:
