@@ -18,9 +18,9 @@ spec:
   - name: config-source
 
   tasks:
-  - name: build-java-app
+  - name: build-app
     taskRef:
-      name: build-java-app
+      name: build-app
     params:
     - name: buildRevision
       value: $(params.buildRevision)
@@ -32,11 +32,11 @@ spec:
     - name: app-source
       workspace: app-source
 
-  - name: deploy-systemtest
+  - name: deploy-test
     taskRef:
       name: deploy
     runAfter:
-    - build-java-app
+    - build-app
     params:
     - name: environment
       value: test
@@ -88,9 +88,9 @@ spec:
     - name: config-source
       workspace: config-source
 
-  - name: run-prod-smoketest
+  - name: run-prod-smtest
     taskRef:
-      name: run-smoketest
+      name: run-smtest
     runAfter:
     - deploy-prod
     params:
