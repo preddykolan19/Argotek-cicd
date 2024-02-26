@@ -1,7 +1,0 @@
-#Need to replace istio.
-apiVersion: v1
-kind: Namespace
-metadata:
-  labels:
-    istio-injection: enabled
-  name: production
