@@ -6,14 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: myapp
+      app: myapp-argocd
   template:
     metadata:
       labels:
-        app: myapp
+        app: myapp-argocd
     spec:
       containers:
-      - name: myapp
+      - name: myapp-argocd
         image: nginx:latest
         #resources:
         #  limits:
