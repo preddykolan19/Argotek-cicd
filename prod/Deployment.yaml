@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: myapp-argocd
-        image: nginx:latest
+        image: nginx:1.25-alpine3.18-perl
         #resources:
         #  limits:
         #    memory: "128Mi"
